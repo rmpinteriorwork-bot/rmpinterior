@@ -116,7 +116,7 @@ Premium Wooden Flooring, heavy-traffic water-resistant SPC Flooring, and durable
 </div>
 <h3 class="text-xl font-bold text-gray-900 mb-3">Modular Kitchen Ergonomics</h3>
 <p class="text-gray-600 text-sm leading-relaxed">
-Built using durable borer-proof 18mm BWP Plywood with an exact 2-inch cutting margin layout allowance. Flawless modular cabinet alignment.
+Built using durable borer-proof 16mm BWP Plywood with an exact 2-inch cutting margin layout allowance. Flawless modular cabinet alignment.
 </p>
 </div>
 
@@ -141,6 +141,95 @@ Flawless laminate pasting, professional-grade wood router trimming, solid wood w
 </div>
 </div>
 </section>
+ <section id="portfolio" class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold text-gray-900 tracking-wide sm:text-4xl uppercase">Our Recent Works</h2>
+      <div class="mt-4 w-24 h-1 bg-yellow-500 mx-auto rounded"></div>
+      <p class="mt-4 text-lg text-gray-600">A glimpse into our premium interior transformations.</p>
+    </div>
+    
+    <div class="relative w-full max-w-5xl mx-auto overflow-hidden rounded-2xl shadow-xl group">
+      <div id="slider" class="flex transition-transform duration-700 ease-in-out">
+        
+        <div class="w-full flex-shrink-0">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1280&q=80" alt="Modular Kitchen" class="w-full h-[300px] md:h-[600px] object-cover">
+        </div>
+        
+        <div class="w-full flex-shrink-0">
+          <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1280&q=80" alt="Living Room Interior" class="w-full h-[300px] md:h-[600px] object-cover">
+        </div>
+        
+        <div class="w-full flex-shrink-0">
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1280&q=80" alt="Bedroom Design" class="w-full h-[300px] md:h-[600px] object-cover">
+        </div>
+        
+        <div class="w-full flex-shrink-0">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1280&q=80" alt="Office Partition" class="w-full h-[300px] md:h-[600px] object-cover">
+        </div>
+        
+        <div class="w-full flex-shrink-0">
+          <img src="https://images.unsplash.com/photo-1598928506311-c55dd5802427?ixlib=rb-4.0.3&auto=format&fit=crop&w=1280&q=80" alt="Custom Wardrobe" class="w-full h-[300px] md:h-[600px] object-cover">
+        </div>
+
+      </div>
+
+      <button onclick="prevSlide()" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-yellow-500 transition opacity-0 group-hover:opacity-100">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button onclick="nextSlide()" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-yellow-500 transition opacity-0 group-hover:opacity-100">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+      
+      <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        <span class="dot w-3 h-3 bg-white rounded-full cursor-pointer opacity-50 transition" onclick="goToSlide(0)"></span>
+        <span class="dot w-3 h-3 bg-white rounded-full cursor-pointer opacity-50 transition" onclick="goToSlide(1)"></span>
+        <span class="dot w-3 h-3 bg-white rounded-full cursor-pointer opacity-50 transition" onclick="goToSlide(2)"></span>
+        <span class="dot w-3 h-3 bg-white rounded-full cursor-pointer opacity-50 transition" onclick="goToSlide(3)"></span>
+        <span class="dot w-3 h-3 bg-white rounded-full cursor-pointer opacity-50 transition" onclick="goToSlide(4)"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.getElementById('slider');
+  const dots = document.querySelectorAll('.dot');
+  const totalSlides = 5;
+
+  function updateSlider() {
+    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+    dots.forEach((dot, index) => {
+      if(index === currentSlide) {
+        dot.classList.remove('opacity-50');
+        dot.classList.add('opacity-100', 'scale-125');
+      } else {
+        dot.classList.add('opacity-50');
+        dot.classList.remove('opacity-100', 'scale-125');
+      }
+    });
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlider();
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateSlider();
+  }
+
+  function goToSlide(index) {
+    currentSlide = index;
+    updateSlider();
+  }
+
+  // தானாகவே 4 வினாடிகளுக்கு ஒருமுறை ஸ்லைடு மாறும்
+  setInterval(nextSlide, 4000);
+  updateSlider();
+</script>
 <section id="about" class="py-16 sm:py-20">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <h2 class="text-3xl font-bold text-gray-900 tracking-wide sm:text-4xl uppercase">About RMP Interior</h2>
