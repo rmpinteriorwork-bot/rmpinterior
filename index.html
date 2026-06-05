@@ -61,13 +61,25 @@ Premium Commercial, Healthcare & Home Interiors
 Combining traditional carpentry mastery with state-of-the-art estimating software to deliver flawless commercial architectures and elegant modular setups.
 </p>
 
+<!-- Button Animation Style -->
+<style>
+  @keyframes edge-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.8); }
+    70% { box-shadow: 0 0 0 15px rgba(245, 158, 11, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+  }
+  .animate-edge-glow {
+    animation: edge-pulse 2s infinite;
+  }
+</style>
+
 <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-<a href="https://rmp-budget-buddy.lovable.app" target="_blank" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-gray-950 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-amber-500/20 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
-<i class="fa-solid fa-calculator"></i> Free Smart Budget Calculator
-</a>
-<a href="https://wa.me/919080405311" target="_blank" class="w-full sm:w-auto bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 font-bold px-8 py-4 rounded-xl transition flex items-center justify-center gap-2">
-<i class="fab fa-whatsapp"></i> Chat on WhatsApp
-</a>
+  <a href="https://rmp-budget-buddy.lovable.app" target="_blank" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded-lg flex items-center justify-center gap-2 transition-all animate-edge-glow">
+    <i class="fa-solid fa-calculator"></i> Free Smart Budget Calculator
+  </a>
+  <a href="https://wa.me/919080405311" target="_blank" class="w-full sm:w-auto bg-transparent border-2 border-white hover:bg-white hover:text-black text-white font-bold py-3 px-8 rounded-lg flex items-center justify-center gap-2 transition-all">
+    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+  </a>
 </div>
 </div>
 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
