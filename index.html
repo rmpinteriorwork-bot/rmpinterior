@@ -26,6 +26,7 @@ background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
 <nav class="bg-white shadow-sm sticky top-0 z-40">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
+          
           <div class="flex-shrink-0 flex items-center gap-3">
             <a href="index.html" class="flex items-center gap-3">
               <img src="da7dce6b-1a1b-4848-bfa1-d170777004fd.jpg" alt="RMP Interior Logo" class="w-12 h-12 rounded-lg object-cover shadow-md">
@@ -35,18 +36,57 @@ background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
               </div>
             </a>
           </div>
+
           <div class="hidden md:flex space-x-8 items-center text-sm font-semibold tracking-wide">
             <a href="#" class="text-amber-600 border-b-2 border-amber-500 pb-1">Home</a>
             <a href="services.html" class="text-gray-500 hover:text-amber-600 transition-colors duration-300">Services</a>
             <a href="#brands" class="text-gray-500 hover:text-amber-600 transition-colors duration-300">Our Brand Partners</a>
+            <a href="#portfolio" class="text-gray-500 hover:text-amber-600 transition-colors duration-300">Recent Works</a>
             <a href="about.html" class="text-gray-500 hover:text-amber-600 transition-colors duration-300">About Us</a>
             <a href="https://wa.me/919080405311" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-full flex items-center gap-2 transition-all shadow-md hover:shadow-lg">
               <i class="fab fa-whatsapp text-lg"></i> Contact Us
             </a>
           </div>
+
+          <div class="md:hidden flex items-center">
+            <button id="mobile-menu-btn" class="text-gray-800 hover:text-amber-500 focus:outline-none text-2xl transition-colors">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-xl absolute w-full left-0 top-20">
+        <div class="flex flex-col px-6 pt-4 pb-6 space-y-4 text-base font-medium">
+          <a href="#" class="text-amber-600 border-l-4 border-amber-500 pl-2">Home</a>
+          <a href="services.html" class="text-gray-600 hover:text-amber-500 pl-2">Services</a>
+          <a href="#brands" class="text-gray-600 hover:text-amber-500 pl-2">Our Brand Partners</a>
+          <a href="#portfolio" class="text-gray-600 hover:text-amber-500 pl-2">Recent Works</a>
+          <a href="about.html" class="text-gray-600 hover:text-amber-500 pl-2">About Us</a>
+          <a href="https://wa.me/919080405311" target="_blank" class="bg-green-500 text-white text-center px-4 py-3 rounded-lg mt-2 shadow-md">
+            <i class="fab fa-whatsapp mr-2"></i> Contact Us
+          </a>
         </div>
       </div>
     </nav>
+
+    <script>
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+
+      // மெனுவில் ஏதேனும் லிங்க்கை கிளிக் செய்தால் மெனு மறைந்துவிட வேண்டும்
+      const links = menu.querySelectorAll('a');
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          menu.classList.add('hidden');
+        });
+      });
+    </script>
 
   
 
@@ -152,7 +192,7 @@ Flawless laminate pasting, professional-grade wood router trimming, solid wood w
 </div>
 </div>
 </section>
- <section id="portfolio" class="py-16 bg-white">
+ <section id="portfolio" class="scroll-mt-24 py-16 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-10">
       <h2 class="text-3xl font-bold text-gray-900 tracking-wide sm:text-4xl uppercase">Our Recent Works</h2>
