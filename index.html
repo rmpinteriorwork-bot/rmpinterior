@@ -24,32 +24,201 @@ background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
-<nav class="bg-white shadow-md sticky top-0 z-50">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex justify-between h-20 items-center">
-<div class="flex items-center gap-3 md:gap-4 flex-shrink-0">
-    <!-- Logo Image -->
-    <img src="da7dce6b-1a1b-4848-bfa1-d170777004fd.jpg" alt="RMP Interior Logo" class="h-12 md:h-16 w-auto object-contain rounded-md">
-    
-    <!-- Company Name & New Tagline -->
-    <div class="flex flex-col justify-center mt-1">
-        <span class="text-xl md:text-2xl font-black tracking-wider text-amber-500 leading-none">RMP INTERIOR</span>
-        <span class="text-[9px] md:text-[11px] text-gray-500 font-bold tracking-widest uppercase mt-1">Built with Vision. Designed with Care.</span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | RMP Interior</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans antialiased text-gray-900 bg-gray-50">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-sm sticky top-0 z-40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex-shrink-0 flex items-center gap-3">
+            <a href="index.html" class="flex items-center gap-3">
+              <!-- Updated Logo Image -->
+              <img src="da7dce6b-1a1b-4848-bfa1-d170777004fd.jpg" alt="RMP Interior Logo" class="w-12 h-12 rounded-lg object-cover shadow-md">
+              <div>
+                <!-- Updated Title Color & Tagline -->
+                <h1 class="font-bold text-xl text-amber-500 tracking-wider uppercase">RMP INTERIOR</h1>
+                <p class="text-[10px] text-gray-500 tracking-widest uppercase">BUILT WITH VISION. DESIGNED WITH CARE.</p>
+              </div>
+            </a>
+          </div>
+          <!-- Menu Links (Desktop) -->
+          <div class="hidden md:flex space-x-8 items-center text-sm font-semibold tracking-wide">
+            <a href="index.html" class="text-gray-500 hover:text-amber-600 transition-colors duration-300">Home</a>
+            <a href="index.html#services" class="text-gray-500 hover:text-amber-600 transition-colors duration-300">Services</a>
+            <a href="index.html#brands" class="text-gray-500 hover:text-amber-600 transition-colors duration-300">Our Brand Partners</a>
+            <a href="about.html" class="text-amber-600 border-b-2 border-amber-500 pb-1">About Us</a>
+            <a href="https://wa.me/919080405311" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-full flex items-center gap-2 transition-all shadow-md hover:shadow-lg">
+              <i class="fab fa-whatsapp text-lg"></i> Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- About Hero Section -->
+    <section class="py-20 bg-gray-900 text-white text-center border-b-4 border-amber-500">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 uppercase tracking-wider">About <span class="text-amber-500">RMP Interior</span></h1>
+            <p class="text-lg md:text-xl text-gray-300 leading-relaxed font-light">
+                With over 20 years of craftsmanship experience, we are Tirunelveli's trusted partner for premium commercial, healthcare, and residential interiors.
+            </p>
+        </div>
+    </section>
+
+    <!-- Certificates Section (Gallery) -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 uppercase tracking-wide">Quality & Certifications</h2>
+                <div class="mt-4 w-24 h-1 bg-amber-500 mx-auto rounded"></div>
+                <p class="mt-4 text-gray-600 text-lg">Proudly certified by Century ProClub for Excellence in Training and Project Conversion Skills.</p>
+            </div>
+
+            <!-- Certificate Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Cert 1 -->
+                <div class="cursor-pointer group rounded-xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 bg-white" onclick="openLightbox('certificate1.jpg')">
+                    <div class="p-2 border-b border-gray-100 bg-gray-50 flex justify-center items-center h-64 overflow-hidden">
+                        <img src="certificate1.jpg" alt="Level 1 Certificate" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-gray-800 text-lg">Level 1 Training</h3>
+                        <p class="text-sm text-amber-600 mt-1"><i class="fas fa-search-plus"></i> Click to view</p>
+                    </div>
+                </div>
+                <!-- Cert 2 -->
+                <div class="cursor-pointer group rounded-xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 bg-white" onclick="openLightbox('certificate2.jpg')">
+                    <div class="p-2 border-b border-gray-100 bg-gray-50 flex justify-center items-center h-64 overflow-hidden">
+                        <img src="certificate2.jpg" alt="Level 2 Certificate" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-gray-800 text-lg">Level 2 Certification</h3>
+                        <p class="text-sm text-amber-600 mt-1"><i class="fas fa-search-plus"></i> Click to view</p>
+                    </div>
+                </div>
+                <!-- Cert 3 -->
+                <div class="cursor-pointer group rounded-xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 bg-white" onclick="openLightbox('certificate3.jpg')">
+                    <div class="p-2 border-b border-gray-100 bg-gray-50 flex justify-center items-center h-64 overflow-hidden">
+                        <img src="certificate3.jpg" alt="Level 3 Certificate" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-gray-800 text-lg">Level 3 Project Conversion</h3>
+                        <p class="text-sm text-amber-600 mt-1"><i class="fas fa-search-plus"></i> Click to view</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 hidden items-center justify-center p-4 opacity-0 transition-opacity duration-300 backdrop-blur-sm">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white hover:text-amber-500 text-5xl transition-colors">&times;</button>
+        <img id="lightbox-img" src="" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl border-4 border-gray-800 transform scale-95 transition-transform duration-300">
     </div>
-</div>
-<div class="hidden md:flex space-x-8 font-medium">
-<a href="#services" class="text-gray-600 hover:text-amber-600 transition">Services</a>
-<a href="#brands" class="text-gray-600 hover:text-amber-600 transition">Our Brand Partners</a>
-<a href="#about" class="text-gray-600 hover:text-amber-600 transition">About Us</a>
-</div>
-<div>
-<a href="https://wa.me/919080405311" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-full font-semibold flex items-center gap-2 transition shadow-md">
-<i class="fab fa-whatsapp text-lg"></i> Contact Us
-</a>
-</div>
-</div>
-</div>
-</nav>
+
+    <script>
+        function openLightbox(imageSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = imageSrc;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            setTimeout(() => {
+                lightbox.classList.remove('opacity-0');
+                img.classList.remove('scale-95');
+            }, 10);
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            lightbox.classList.add('opacity-0');
+            img.classList.add('scale-95');
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                lightbox.classList.remove('flex');
+                img.src = '';
+            }, 300);
+        }
+    </script>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919080405311" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 hover:scale-110 transition-all z-50 flex items-center justify-center">
+      <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Enhanced Footer Section -->
+    <footer class="bg-gray-900 text-white mt-16 pt-24 pb-8 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          
+          <!-- Column 1: About & Social -->
+          <div>
+            <h3 class="text-2xl font-bold text-amber-500 mb-4">RMP INTERIOR</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+              Over 20 years of craftsmanship experience. Tirunelveli's trusted partner for premium commercial, healthcare, and residential interiors.
+            </p>
+            <!-- Social Icons -->
+            <div class="flex space-x-5">
+              <a href="https://www.facebook.com/share/1HMpmHQkhk/" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors duration-300"><i class="fab fa-facebook-f text-xl"></i></a>
+              <a href="https://www.instagram.com/rmpinterior?igsh=dXJtZDJ1YXFpM21h" target="_blank" class="text-gray-400 hover:text-pink-500 transition-colors duration-300"><i class="fab fa-instagram text-xl"></i></a>
+              <a href="https://youtube.com/@rmpinterior?si=gN3E_Md7G1Xq6LU7" target="_blank" class="text-gray-400 hover:text-red-500 transition-colors duration-300"><i class="fab fa-youtube text-xl"></i></a>
+              <a href="https://pin.it/3gcdrRoL8" target="_blank" class="text-gray-400 hover:text-red-600 transition-colors duration-300"><i class="fab fa-pinterest text-xl"></i></a>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div>
+            <h4 class="text-lg font-semibold text-white mb-4 uppercase tracking-wider">Quick Links</h4>
+            <ul class="space-y-3 text-sm text-gray-400">
+              <li><a href="index.html#services" class="hover:text-blue-400 transition-colors duration-300">Our Services</a></li>
+              <li><a href="index.html#brands" class="hover:text-blue-400 transition-colors duration-300">Brand Partners</a></li>
+              <li><a href="index.html#portfolio" class="hover:text-blue-400 transition-colors duration-300">Recent Works</a></li>
+              <li><a href="about.html" class="hover:text-blue-400 transition-colors duration-300">About Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Contact Info -->
+          <div>
+            <h4 class="text-lg font-semibold text-white mb-4 uppercase tracking-wider">Contact Us</h4>
+            <ul class="space-y-4 text-sm text-gray-400">
+              <li class="flex items-start gap-3">
+                <i class="fas fa-map-marker-alt text-amber-500 mt-1"></i>
+                <!-- Updated Pincode -->
+                <span>Tirunelveli, Tamil Nadu, India - 627011</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fas fa-phone-alt text-amber-500"></i>
+                <a href="tel:+919080405311" class="hover:text-blue-400 transition-colors duration-300">+91 9080405311</a>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fas fa-envelope text-amber-500"></i>
+                <a href="mailto:rmpinteriorwork@gmail.com" class="hover:text-blue-400 transition-colors duration-300">rmpinteriorwork@gmail.com</a>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+
+        <!-- Bottom Copyright -->
+        <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+          <p>&copy; 2026 RMP Interior. All rights reserved. BUILT WITH VISION. DESIGNED WITH CARE.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Enhanced Footer Section End -->
+
+</body>
+</html>
 
 <section class="hero-bg text-white py-24 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
 <div class="max-w-4xl mx-auto relative z-10">
